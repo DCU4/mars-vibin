@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DCU4/space-data.git.git"
+    "url": "git+https://github.com/DCU4/mars-vibin.git.git"
   },
   "author": "Dylan Connor",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DCU4/space-data/issues"
+    "url": "https://github.com/DCU4/mars-vibin/issues"
   },
-  "homepage": "https://github.com/DCU4/space-data/",
+  "homepage": "https://github.com/DCU4/mars-vibin/",
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
