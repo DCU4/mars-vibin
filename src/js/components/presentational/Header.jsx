@@ -6,7 +6,7 @@ export const Header = (props) => {
     return (
 
             <header>
-              <p>What's it like to live on Mars?</p>
+              <p>Mars Vibing</p>
               <select id="dataChange" onChange={props.handleDataChange}>
                 <option value="images">Mars Images</option>
                 <option value="weather">Mars Weather</option>
