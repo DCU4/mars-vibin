@@ -2,13 +2,15 @@ import React, { Component, useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import { MarsImages } from "../presentational/MarsImages.jsx";
 import { MarsWeather } from "../presentational/MarsWeather.jsx";
+import { MarsInfo } from "../presentational/MarsInfo.jsx";
 import { Header } from "../presentational/Header.jsx";
+// import Mars from "./src/img/mars-1024.jpg";
 
 class Container extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dataShowing: 'images',
+      dataShowing: 'info',
       cache: []
     }
   }
@@ -28,21 +30,31 @@ class Container extends Component {
 
   render() {
     let dataShowing = this.state.dataShowing;
-    // console.log(this.state.cache)
     return (
       <main>
-        <Header 
+        <img id="mars" src="/src/img/mars-1024.png" />
+        <Header
           dataShowing={dataShowing}
           handleDataChange={this.handleDataChange}
         />
-        {dataShowing == 'images' ? (
-            <MarsImages 
-              cache={this.state.cache}
-              handleCache={this.handleCache}
-            />
-        ) : (
-            <MarsWeather />
-          )}
+
+        {
+          dataShowing == 'images' &&
+          <MarsImages
+            cache={this.state.cache}
+            handleCache={this.handleCache}
+          />
+        }
+         {
+          dataShowing == 'weather' &&
+          <MarsWeather />
+        }
+         {
+          dataShowing == 'info' &&
+          <MarsInfo />
+        }
+
+
 
       </main>
 
