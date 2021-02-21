@@ -7,6 +7,17 @@
   }
 }
 
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
 @keyframes spinner {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -43,13 +54,6 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    select {
-      padding: 10px 5px;
-      background: transparent;
-      border-radius: 0;
-      border: 1px solid #444;
-      color: #444;
-    }
   }
   .image-grid {
     display: grid;
@@ -60,6 +64,8 @@ main {
       object-fit: cover;
       height: 300px;
       width: 100%;
+      opacity: 0;
+      animation: fade-up .8s ease-out forwards;
     }
   }
   .season {
@@ -74,6 +80,8 @@ main {
       padding: 20px;
       text-align: center;
       box-shadow: 0 0 1px .1px #444;
+      opacity: 0;
+      animation: fade-up .8s ease-out forwards;
       &:first-of-type {
         grid-column: 1 / 6;
       }
@@ -82,4 +90,12 @@ main {
       }
     }
   }
+}
+
+select {
+  padding: 10px 5px;
+  background: transparent;
+  border-radius: 0;
+  border: 1px solid #444;
+  color: #444;
 }
