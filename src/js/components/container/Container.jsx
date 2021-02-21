@@ -28,7 +28,7 @@ class Container extends Component {
 
   render() {
     let dataShowing = this.state.dataShowing;
-    console.log(this.state.cache)
+    // console.log(this.state.cache)
     return (
       <main>
         <Header 
