@@ -29,13 +29,15 @@
 }
 
 body {
-  background: #EEE;
-  color: #444;
-  font-size: 2rem;
+  background: #111;
+  color: #EEE;
+  font-size: 1rem;
   font-family: 'Avenir', sans-serif;
   position: relative;
   height: 100vh;
   padding: 60px;
+  opacity: 0;
+  animation: fade-in 1s ease-out forwards;
   #spinner {
     position: absolute;
     top: 50%;
@@ -79,7 +81,7 @@ main {
       border-radius: 5px;
       padding: 20px;
       text-align: center;
-      box-shadow: 0 0 1px .1px #444;
+      box-shadow: 0 0 1px .1px #EEE;
       opacity: 0;
       animation: fade-up .8s ease-out forwards;
       &:first-of-type {
@@ -90,12 +92,44 @@ main {
       }
     }
   }
+
+  .info {
+    width: 75%;
+    margin: 0 auto;
+    h2 {
+      font-size: 3em;
+      text-align: center;
+      opacity: 0;
+      animation: fade-up .4s ease-out .3s forwards;
+      margin-bottom: 30px;
+    }
+    p {
+      font-size: 1.75em;
+      margin-bottom: 15px;
+      opacity: 0;
+      animation: fade-up .5s ease-out .4s forwards;
+    }
+  }
+}
+
+#mars {
+  position: fixed;
+  bottom: -70%;
+  left: -20%;
+  z-index: -1;
+  box-shadow: 0 0 100px 40px rgba(0,0,0,0.5);
+  border-radius: 50%;
+  opacity: 0;
+  animation: fade-up .8s ease-out .3s forwards;
 }
 
 select {
   padding: 10px 5px;
   background: transparent;
   border-radius: 0;
-  border: 1px solid #444;
-  color: #444;
+  border: 1px solid #EEE;
+  color: #EEE;
+  &#rovers {
+    margin-bottom: 15px;
+  }
 }
