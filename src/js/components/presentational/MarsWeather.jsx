@@ -21,14 +21,9 @@ export class MarsWeather extends Component {
         weather: data
       });
     }
-
   }
 
-  
-
-
   componentDidMount () {
-    // console.log('mount');
     this.getData();
   }
 
