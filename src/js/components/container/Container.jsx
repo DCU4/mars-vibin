@@ -32,7 +32,7 @@ class Container extends Component {
     let dataShowing = this.state.dataShowing;
     return (
       <main>
-        <img id="mars" src="/src/img/mars-1024.png" />
+        <img id="mars" src="/mars-1024.png" />
         <Header
           dataShowing={dataShowing}
           handleDataChange={this.handleDataChange}
