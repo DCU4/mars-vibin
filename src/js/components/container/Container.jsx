@@ -4,7 +4,8 @@ import { MarsImages } from "../presentational/MarsImages.jsx";
 import { MarsWeather } from "../presentational/MarsWeather.jsx";
 import { MarsInfo } from "../presentational/MarsInfo.jsx";
 import { Header } from "../presentational/Header.jsx";
-// import Mars from "./src/img/mars-1024.jpg";
+// import Mars from "/app.js";
+const Mars = './src/img/mars-1024.png';
 
 class Container extends Component {
   constructor(props) {
@@ -32,7 +33,7 @@ class Container extends Component {
     let dataShowing = this.state.dataShowing;
     return (
       <main>
-        <img id="mars" src="/mars-1024.png" />
+        <img id="mars" src='./images/mars-1024.png' />
         <Header
           dataShowing={dataShowing}
           handleDataChange={this.handleDataChange}

@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 module.exports = {
+  mode: 'development',
   entry: ['babel-polyfill','./src/app.js'],
   output: {
     path: __dirname + '/docs',
@@ -35,10 +36,15 @@ module.exports = {
         test: /\.(jpe?g|gif|png|svg)$/i,
         use: [
           {
-            loader: 'url-loader',
+            loader: 'file-loader',
             options: {
-              limit: 10000
-            }
+              outputPath: 'images',
+              name(resourcePath, resourceQuery) {
+                // `resourcePath` - `/absolute/path/to/file.js`
+                // `resourceQuery` - `?foo=bar`    
+                return '[name].[ext]';
+              }
+            },
           }
         ]
       }
